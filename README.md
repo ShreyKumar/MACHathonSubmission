@@ -10,3 +10,8 @@
 
 ## Troubleshooting
 If at any time, the hot reload doesn't work, you can simply press `r` in your terminal to rebuild the app on your phone
+
+## Contributors
+Matt Ahmed (Myplanet)
+Cody Collicot (Myplanet)
+Shreyansh Kumar (Myplanet)
