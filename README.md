@@ -1,5 +1,5 @@
 # MACHathon Submission
-
+This repo contains the source code of our PMS app
 ## Quick start
 1. Clone this repo
 2. Install all dependencies with `yarn`
@@ -13,5 +13,7 @@ If at any time, the hot reload doesn't work, you can simply press `r` in your te
 
 ## Contributors
 Matt Ahmed (Myplanet)
+
 Cody Collicot (Myplanet)
+
 Shreyansh Kumar (Myplanet)
