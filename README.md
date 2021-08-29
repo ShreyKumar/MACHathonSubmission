@@ -12,7 +12,7 @@ This repo contains the source code of our PMS app
 If at any time, the hot reload doesn't work, you can simply press `r` in your terminal to rebuild the app on your phone
 
 ## Contributors
-Matt Ahmed (Myplanet)
+Matt Ahmad (Myplanet)
 
 Cody Collicot (Myplanet)
 
