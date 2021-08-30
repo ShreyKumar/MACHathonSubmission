@@ -18,6 +18,7 @@ import LoginScreen from '../screens/LoginScreen';
 import CameraScreen from '../screens/CameraScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import CameraPreview from '../screens/CameraPreview';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -38,7 +39,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      {/* <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} /> */}
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="CameraScreen" component={CameraScreen} />
+      <Stack.Screen name="CameraPreview" component={CameraPreview} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -58,14 +62,14 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Login"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
+        name="Login"
         component={LoginScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        options={({ navigation }: RootTabScreenProps<'Login'>) => ({
           title: 'Login',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (

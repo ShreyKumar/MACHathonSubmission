@@ -1,18 +1,19 @@
 import { Camera } from 'expo-camera';
+import * as MediaLibrary from 'expo-media-library'
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { Button, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function CameraScreen() {
+export default function CameraScreen({ navigation }) {
   const { front: FRONT_CAMERA, back: BACK_CAMERA } = Camera.Constants.Type
   const camera = useRef(null)
   const [isCameraAllowed, setIsCameraAllowed] = useState(false)
   const [orientation, setOrientation] = useState(BACK_CAMERA)
+  const [capturedPicture, setCapturedPicture] = useState(null)
 
   useEffect(() => {
     (async () => {
@@ -35,8 +36,9 @@ export default function CameraScreen() {
         <Button
           title="Take picture"
           onPress={async () => {
-            if (!camera.current) return
-            await camera.current.takePictureAsync()
+            const picture = await camera.current?.takePictureAsync()
+            // await MediaLibrary.saveToLibraryAsync(picture.uri)
+            navigation.navigate('CameraPreview', { picture })
           }}
         />
       </Camera>

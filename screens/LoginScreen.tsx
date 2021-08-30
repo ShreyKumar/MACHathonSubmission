@@ -3,11 +3,10 @@ import { useState } from 'react';
 import { Alert, Button, Keyboard, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function LoginScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function LoginScreen({ navigation }: RootTabScreenProps<'Login'>) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -29,7 +28,7 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'TabOne'>
         secureTextEntry
         onBlur={() => Keyboard.dismiss()}
       />
-      <Button title="Login" onPress={() => navigation.navigate('TabTwo') }/>
+      <Button title="Login" onPress={() => navigation.navigate('CameraScreen') }/>
     </View>
   );
 }
