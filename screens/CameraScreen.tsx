@@ -13,7 +13,6 @@ export default function CameraScreen({ navigation }) {
   const camera = useRef(null)
   const [isCameraAllowed, setIsCameraAllowed] = useState(false)
   const [orientation, setOrientation] = useState(BACK_CAMERA)
-  const [capturedPicture, setCapturedPicture] = useState(null)
 
   useEffect(() => {
     (async () => {

@@ -18,6 +18,7 @@ export type RootStackParamList = {
   LoginScreen: string;
   CameraScreen: string;
   CameraPreview: undefined;
+  SubmissionConfirmation: undefined;
   Modal: undefined;
   NotFound: undefined;
 };
