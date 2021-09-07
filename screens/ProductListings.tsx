@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
 import { Button } from 'react-native'
 import ProductListing from '../components/ProductListing'
 import { Text, View } from '../components/Themed'
@@ -14,7 +14,7 @@ export default function ProductListings({ navigation }) {
   ]
 
   return (
-    <View>
+    <ScrollView>
       <View style={styles.titleSection}>
         <Text style={styles.productsHeader}>My Products</Text>
         <Button style={styles.productButton} title="Add a Product" onPress={() => navigation.navigate('CameraScreen')} />
@@ -32,7 +32,7 @@ export default function ProductListings({ navigation }) {
           ))
         }
       </View>
-    </View>
+    </ScrollView>
   )
 }
 
@@ -42,15 +42,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    marginBottom: 16
   },
   productListings: {
     display: 'flex'
   },
   productsHeader: {
-    fontSize: 24
+    fontSize: 24,
+    marginBottom: 16
   },
   productsButton: {
-    fontSize: 24
+    fontSize: 24,
+    marginBottom: 16,
+    padding: 0
   }
 })
