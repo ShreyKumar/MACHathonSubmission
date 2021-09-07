@@ -28,7 +28,7 @@ export default function LoginScreen({ navigation }: RootTabScreenProps<'Login'>)
         secureTextEntry
         onBlur={() => Keyboard.dismiss()}
       />
-      <Button title="Login" onPress={() => navigation.navigate('CameraScreen') }/>
+      <Button title="Login" onPress={() => navigation.navigate('ProductListings') }/>
     </View>
   );
 }

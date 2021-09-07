@@ -40,8 +40,11 @@ export default function CameraPreview({ navigation, route: { params: { picture }
 
 const styles = StyleSheet.create({
   logo: {
-    width: 190,
-    height: 190
+    width: "100%",
+    height: "40%",
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: 24
   },
   input: {
     height: 40,

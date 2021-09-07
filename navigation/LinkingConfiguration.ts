@@ -33,6 +33,7 @@ const linking: LinkingOptions<RootStackParamList> = {
       //   },
       // },
       LoginScreen: 'LoginScreen',
+      ProductListings: 'ProductListings',
       CameraScreen: 'CameraScreen',
       CameraPreview: 'CameraPreview',
       SubmissionConfirmation: 'SubmissionConfirmation',

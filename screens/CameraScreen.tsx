@@ -46,14 +46,11 @@ export default function CameraScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   camera: {
     width: "100%",
     height: "100%",
-    display: "flex",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });

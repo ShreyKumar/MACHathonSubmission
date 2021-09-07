@@ -16,6 +16,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import LoginScreen from '../screens/LoginScreen';
 import CameraScreen from '../screens/CameraScreen';
+import ProductListings from '../screens/ProductListings';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import CameraPreview from '../screens/CameraPreview';
@@ -42,8 +43,9 @@ function RootNavigator() {
     <Stack.Navigator>
       {/* <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} /> */}
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      <Stack.Screen name="CameraScreen" component={CameraScreen} />
-      <Stack.Screen name="CameraPreview" component={CameraPreview} />
+      <Stack.Screen name="ProductListings" component={ProductListings} />
+      <Stack.Screen options={{ headerShown: false }} name="CameraScreen" component={CameraScreen} />
+      <Stack.Screen options={{ title: 'Add your Product information' }} name="CameraPreview" component={CameraPreview} />
       <Stack.Screen name="SubmissionConfirmation" component={SubmissionConfirmation} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
